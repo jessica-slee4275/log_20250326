@@ -1,0 +1,42 @@
+
+Q. final - once value setting, cannot change (contant), no overriding, no inherit
+finally - always executes, regardless of whether an exception is thrown in the try-catch
+
+Q. java DB connection - Using JDBC
+API to connect to an SQL-based database, execute queries, and process the result.
+
+
+Q.  
+from 
+123
+12
+
+to 
+00123
+00012
+
+A.Java -> String.format("%05d", num);
+Python -> f"{num:05d}" 
+
+Q.  
+customer table
+ customer_id, customer_name
+
+ order table
+ id, order_detail, customer_id
+10+ orders customer?
+
+A. 
+SELECT
+    customer.customer_id,    
+    customer.customer_name,    
+    COUNT(orders.id) AS order_count
+FROM
+    Customer customer
+JOIN
+    Orders orders 
+ON customer.customer_id = orders.customer_id
+WHERE
+    orders.customer_id > 10
+GROUP BY
+    customer.customer_id, customer.customer_name;
